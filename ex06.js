@@ -5,18 +5,16 @@
 
 //M = C(1 + i)^t --> Juros Compostos
 
-function jurosSimples(C, i, t) {
-    return C * i * t
+function simpleInterest(C, i, t) {
+    let calc = C * i * t
+     let compound = function ( ) { //Retornar o capital inicial
+         Math.pow((1 + i), t) / C + calc
+        console.log(compound.result)
+    }
+    return C + calc
 }
 
-function jurosCompostos(jurosSimples) {
-    
-}
-
-
-let result = jurosSimples(1000, 0.10, 2)
-console.log(result);
-
-
+const amount = simpleInterest(1000, 0.10, 2)
+console.log('$'+ amount)
 
 //Teacher way -->
