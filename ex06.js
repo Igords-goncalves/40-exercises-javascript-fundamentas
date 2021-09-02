@@ -20,4 +20,15 @@ const amount = simpleInterest(1000, 0.10, 2)
 console.log('$'+ amount)
 
 
-//Teacher way -->
+//Teacher way --> Using a simple form to make things
+
+function jurosSimples (capitalInicial, taxa, tempo) {
+    return capitalInicial + (capitalInicial * taxa * tempo)
+}
+
+function jurosCompostos (capitalInicial, taxa, tempo) {
+    return capitalInicial * (1 + taxa) ** tempo
+}
+
+console.log(jurosSimples(100, 10/100, 2));
+console.log(jurosCompostos(100, 10/100, 2));
