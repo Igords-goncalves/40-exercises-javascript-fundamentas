@@ -7,14 +7,16 @@
 
 function simpleInterest(C, i, t) {
     let calc = C * i * t
-    let compoundInterest = function() { //Retornar o capital inicial
-        Math.pow((1 + i), t) / C + calc
-        return compoundInterest()
+    let compoundInterest = function() {
+        let result = C * ((1 + i) ** t)
+        return result
     }
-    return C + calc + compoundInterest
+    console.log(C + calc)
+    return compoundInterest().toFixed(2)
 }
 
-const amount = simpleInterest(1000, 0.10, 2)
+const amount = simpleInterest(100, 0.10, 2)
 console.log('$'+ amount)
+
 
 //Teacher way -->
