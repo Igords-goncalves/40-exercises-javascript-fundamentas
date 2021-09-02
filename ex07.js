@@ -18,8 +18,8 @@ const baskhara = (a = 3 , b = - 5, c = 12) => { //I can allready use standard pa
         console.log('Delta is: '+ delta)
         // let x =  -(-b + Math.sqrt(delta)) / 2 * a --> x' and x"
 
-        let x1 = -(-b + Math.sqrt(delta)) / 2 * a; //Looking teacher
-        let x2 = -(-b - Math.sqrt(delta)) / 2 * a; //Looking teacher
+        let x1 = (-b + Math.sqrt(delta)) / 2 * a; //Looking teacher
+        let x2 = (-b - Math.sqrt(delta)) / 2 * a; //Looking teacher
         result.push(x1) //Looking teacher
         result.push(x2) //Looking teacher
         return result //Looking teacher
