@@ -9,18 +9,20 @@
 //Equation: 3x² - 5x + 12 = 0
 
 const baskhara = (a = 3 , b = - 5, c = 12) => { //I can allready use standard params
-    let delta = (Math.pow(b, 2))  - (4 * (a * c))
+    let result = []
+    let delta = (b ** 2)  - (4 * (a * c))
 
     if (delta < 0) {
         console.log('Negative Delta')
-    } else {
-        let x1 = -(-5) + Math.sqrt(delta) / 2 * a;
-        let x2 = -(-5) - Math.sqrt(delta) / 2 * a;
-        return `Its a value of ${x1} and its od ${x2}`
+    } else { 
+        let x1 = -(-5 + Math.sqrt(delta) / 2 * a);
+        let x2 = -(-5 - Math.sqrt(delta) / 2 * a);
+        result.push(x1)
+        result.push(x2)
+        return result //O método é o push
     }
-    return (`The end result is ${delta}`)
 }
 
-console.log(baskhara(-33, 5, 40)) //Traying to oder things
+console.log(baskhara(1, 3, 2)) //Traying to oder things
 
 //Teacher way -->
