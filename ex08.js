@@ -14,7 +14,7 @@
 
 function record(pointsList) {
 
-    let pointsArray = pointsList.split(", ")//looking teacher --> Putting inside a arrays
+    let pointsArray = pointsList.split(",")// looking teacher --> Putting inside a arrays
 
     console.log(pointsArray)
 }
@@ -24,6 +24,6 @@ let pointsList = (values) => {
     return values
 }
 
-record('10 2 1 80 43') //Taking notes about total point for match
+record('10, 2, 1, 80, 43') //Taking notes about total point for match
 
 //Teacher way -->
