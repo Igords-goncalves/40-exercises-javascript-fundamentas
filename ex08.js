@@ -15,14 +15,19 @@
 function record(pointsList) {
 
     let pointsArray = pointsList.split(",")// looking teacher --> Putting inside a arrays
+    let points = []
 
-    console.log(pointsArray)
+    for (let i in pointsArray) { //Coverting string in numbers
+        let pointsToNumber = parseInt(pointsArray[i])
+        
+        points.push(pointsToNumber)
+        // console.log(pointsToNumber) teste
+    }
+
+    console.log(points)
 }
 
-let pointsList = (values) => {
-    console.log(values)
-    return values
-}
+
 
 record('10, 2, 1, 80, 43') //Taking notes about total point for match
 
