@@ -4,26 +4,51 @@
 // 1 - We have strings with the total sum, I'll define the points.
 // 2 - A function receive these strings.
 // 3 - A function compair the values of strings, I need covert all index in number or separete these string
-// 4 - Function return the numbers of times that he made broke himself record of bigger number of point for match.
-// 5 - Function return your worse game.
+// 4 - Function return the numbers of times that he broken himself record, the major number
+// 5 - Function return your worse game the minor number.
+// 6 - The final result is a array with the index of worse and numbers of record broken
 
 //PT-BR Obs. O exercício pede a pontuação final de cada, logo você deve supor que os pontos durante as partidas já foram registrados
 //PT-BR Pontos da Partida Somados = Pontuação total da Partida
 
+/* 
+Obs.: O primeiro jogo não conta como novo recorde do melhor.
+Exemplo:
+String: “10 20 20 8 25 3 0 30 1”
+Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
+aconteceu no sétimo jogo.)
+*/
+
 //My way -->
 
-function record(pointsList) {
-
-    let pointsArray = pointsList.split(",")// looking teacher --> Putting inside a arrays
+function recordList(pointsList) {
+    // Putting inside an arrays and separate strings
+    let pointsArray = pointsList.split(",")
     let points = []
-    //Coverting string in numbers
+
+    //Coverting strings in numbers to make work easy
     for (let i in pointsArray) { 
         let pointsToNumber = parseInt(pointsArray[i])
         points.push(pointsToNumber)
-        // console.log(pointsToNumber) teste
+        // console.log(pointsToNumber) --> teste
     }
-    console.log(points)
+    //console.log(points) --> teste
+    let brokingRecords = (values) => {
+        let majorPoint = 0
+        for (let index = 1; index < values.length; index++) { //No index 0
+            console.log(index + " = " + values[index])
+            if(values[index] > majorPoint) {
+                majorPoint = values[index]
+                console.log(majorPoint)
+            }
+        }
+        return values
+    }
+    console.log(brokingRecords(points))
 }
-record('10, 2, 1, 80, 43') //Taking notes about total point for match, now I can use parameters as a points
+
+
+//Now I can use parameters as a points
+recordList('10, 2, 1, 80, 43, 53, 3')
 
 //Teacher way -->
