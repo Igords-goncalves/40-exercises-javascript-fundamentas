@@ -57,7 +57,7 @@ function recordList(pointsList) {
 
 //Now I can use parameters strings as a points
 
-recordList('10, 2, 1, 80, 43, 53, 3, 90')
+recordList('10, 2, 1, 43, 53, 3')
 
 
 
