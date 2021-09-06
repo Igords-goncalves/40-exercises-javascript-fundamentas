@@ -25,32 +25,38 @@ function recordList(pointsList) {
     // Putting inside an arrays and separate strings
     let pointsArray = pointsList.split(",")
     let points = []
-
     //Coverting strings in numbers to make work easy
     for (let i in pointsArray) { 
         let pointsToNumber = parseInt(pointsArray[i])
-        points.push(pointsToNumber)
+        points.push(pointsToNumber) //Insert inside an array again
         // console.log(pointsToNumber) --> teste
     }
     //console.log(points) --> teste
     let brokingRecords = (values) => {
-        let majorPoint = 0
-        let minorPoint = 0
+        let majorPoint = values[0]
+        let minorPoint = values[0]
+
         for (let index = 1; index < values.length; index++) { //No index 0
-            console.log(index + " = " + values[index])
+            //console.log(index + " = " + values[index])
             if(values[index] > majorPoint) {
-                majorPoint = values[index]
-                console.log(majorPoint)
+                majorPoint = values[index] //Obvisioly
+                console.log(index) //Idex of the record broken
+            } else if (values[index] < minorPoint) {
+                minorPoint = values[index] 
+                console.log(index) //Index of the worst match
             }
         }
+        //let total = [] 
+        //return total.push(minorPoint)
         return values
+
     }
-    console.log(brokingRecords(points))
+    console.log(brokingRecords(points)) //The param values receive a value of points
 }
 
 
 //Now I can use parameters strings as a points
 
-recordList('10, 2, 1, 80, 43, 53, 3, 700')
+recordList('10, 2, 1, 80, 43, 53, 3')
 
 //Teacher way -->
