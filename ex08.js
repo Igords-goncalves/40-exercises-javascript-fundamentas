@@ -35,6 +35,7 @@ function recordList(pointsList) {
     //console.log(points) --> teste
     let brokingRecords = (values) => {
         let majorPoint = 0
+        let minorPoint = 0
         for (let index = 1; index < values.length; index++) { //No index 0
             console.log(index + " = " + values[index])
             if(values[index] > majorPoint) {
@@ -48,7 +49,8 @@ function recordList(pointsList) {
 }
 
 
-//Now I can use parameters as a points
-recordList('10, 2, 1, 80, 43, 53, 3')
+//Now I can use parameters strings as a points
+
+recordList('10, 2, 1, 80, 43, 53, 3, 700')
 
 //Teacher way -->
