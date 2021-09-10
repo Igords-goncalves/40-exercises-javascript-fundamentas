@@ -4,7 +4,7 @@
 /*
 Vai verifar se o dia é umas das 3 opções
 1 - Dia útil
-2 - Fim de Semana Sábado / DOmingo
+2 - Fim de Semana Sábado / Domingo
 3 - Dia inválido, exemplo: Dia 32
 */
 
@@ -19,12 +19,14 @@ let calendar = function (number = 31) {
 
 function dayVerifier (date) {
     date = calendar()
-    switch (date) {
-        case date[0]:
-        case date[7]:
-            console.log('Weekend')
-        default:
-            return 'Choose a day'
+    for (let index = 0; index <= date.length; index = index + 7) { //0, 6, 7, 13, 14, 20, 21, 27, 28
+        const weekEnd = date[index];
+        switch (weekEnd) {
+            case 1:
+                console.log('Weekends ' + weekEnd)
+            default:
+                break;
+        }
     }
 }
 dayVerifier()
