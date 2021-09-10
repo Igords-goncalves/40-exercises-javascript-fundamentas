@@ -15,4 +15,16 @@ let calendar = function (number = 31) {
     }
     return arrayDays
 }
-console.log(calendar()) //Default
+//console.log(calendar())
+
+function dayVerifier () {
+    let date = calendar()
+    console.log(date)
+    for (let index = 0; index <= date.length; index = index + 7) { //0, 6, 7, 13, 14, 20, 21, 27, 28
+        const sunday = date[index];
+        const saturday = 0
+            const weekEnd = saturday + ", " + sunday
+            console.log("These are the weekends = " + weekEnd)
+    }
+}
+dayVerifier()
