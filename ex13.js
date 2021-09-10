@@ -17,8 +17,20 @@ let calendar = function (number = 31) {
 }
 //console.log(calendar())
 
-function dayVerifier () {
-    let date = calendar()
+function dayVerifier (date) {
+    date = calendar()
+    switch (date) {
+        case date[0]:
+        case date[7]:
+            console.log('Weekend')
+        default:
+            return 'Choose a day'
+    }
+}
+dayVerifier()
+
+/* function dayVerifier () {
+    let date = calendar()i
     console.log(date)
     for (let index = 0; index <= date.length; index = index + 7) { //0, 6, 7, 13, 14, 20, 21, 27, 28
         const sunday = date[index];
@@ -28,3 +40,4 @@ function dayVerifier () {
     }
 }
 dayVerifier()
+*/
