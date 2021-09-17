@@ -4,21 +4,13 @@
 // Qual valor pagarei no mês escolhido
 
 function associationYearPlan(month, value = 150) {
-    switch (month) {
-        case 1: //January
-            return `The value is U$${value}`
-            break;
-        case 2: //Feburary 
-            let feb = console.log(`The value is U$${(value * 0.05) + value}`)
-            return feb
-            break;
-        case 3:
-            let mar = console.log(`The value is U$${(feb * 0.05) + feb}`)
-            return mar
-            break;
-        default:
-            break;
+    if(month > 0 && month < 13) {
+        tax = 5/100
+        late = month - 1
+        return (value * ((1 + tax)**late)).toFixed(2)
+    } else {
+        return 'Ivalid month'
     }
 }
 
-console.log(associationYearPlan(3))
+console.log(associationYearPlan(8))
