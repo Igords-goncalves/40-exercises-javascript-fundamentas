@@ -8,15 +8,34 @@ Vai verifar se o dia é umas das 3 opções
 3 - Dia inválido, exemplo: Dia 32
 */
 
-let calendar = function (number = 31) {
-    let arrayDays = []
+function calendar (number) {
+    /*let arrayDays = []
     for (let i = 1; i <= number; i++) {
         arrayDays.push(i)
+    }*/
+    switch (number) {
+        case 1:
+            console.log('Weekend')
+            break;
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            console.log('Week day')
+            break;
+        case 7:
+            console.log('Weekend')
+            break;
+        default:
+            console.log('Its not a number')
+            break;
     }
-    return arrayDays
+    return number
 }
-//console.log(calendar())
+calendar(4)
 
+/*
 function dayVerifier (date) {
     date = calendar()
     for (let index = 0; index <= date.length; index = index + 7) { //0, 6, 7, 13, 14, 20, 21, 27, 28
@@ -31,8 +50,8 @@ function dayVerifier (date) {
 }
 dayVerifier()
 
-/* function dayVerifier () {
-    let date = calendar()i
+function dayVerifier () {
+    let date = calendar()
     console.log(date)
     for (let index = 0; index <= date.length; index = index + 7) { //0, 6, 7, 13, 14, 20, 21, 27, 28
         const sunday = date[index];
