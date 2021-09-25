@@ -7,35 +7,31 @@
 // Uidade padrão centimetros
 
 function indiceDeALtura(altura1, txCrescimento1, altura2, txCrescimento2) {
+
+    let kid1 = altura1
+    let kid2 = altura2
+
     let kidMenor = 0
-    let kidMaior = 0
-    if (altura1 > altura2) {
+
+    if (kid1  > kid2) {
         kidMenor = altura2
-        kidMaior = altura1
         console.log(`A crinça menor tem ${kidMenor}cm`)
-    } else if (altura1 < altura2) {
-        kidMenor = altura1
-        kidMaior = altura2
-        console.log(`A crinça menor tem ${kidMenor}cm`)
-    } else {
-        console.log('As alturas das crianças são iguais')
-    }
+    } else 
+        if (kid1 < kid2) {
+            kidMenor = altura1
+            console.log(`A crinça menor tem ${kidMenor}cm`)
+        } else {
+            console.log('As alturas das crianças são iguais')
+        }
 
-//txCrescimento ---> a cada 1 ano a criança cresce x centimetros
+// txCrescimento ---> a cada 1 ano a criança cresce x centimetros
 
-    const calculoDeCrescimento = function () {
+        let ano = 0
 
-       let diferencaDeCrescimento = kidMaior - kidMenor
-       console.log(diferencaDeCrescimento) //Teste
-       
-       if (diferencaDeCrescimento > txCrescimento1) {
-          let resultado = diferencaDeCrescimento - txCrescimento1
-          console.log(resultado)
-       } else if (diferencaDeCrescimento > txCrescimento2) {
-           let resultado = diferencaDeCrescimento - txCrescimento2
-           console.log(resultado)
-       }
-    }
-    return calculoDeCrescimento()
+        if (kid1 + txCrescimento1 < kid2) {
+            ano++
+        }else if(kid2 + txCrescimento2 < kid1) {
+            ano++
+        }
 }
 indiceDeALtura(130, 5, 110, 30)
