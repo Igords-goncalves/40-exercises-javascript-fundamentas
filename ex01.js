@@ -1,4 +1,4 @@
-//My solution --> Using a method Function Factory
+//My solution --> Using a method Function constructor
 
 function calculate(a, b) {
    return {

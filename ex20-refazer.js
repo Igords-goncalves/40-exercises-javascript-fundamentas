@@ -7,7 +7,7 @@ informações sobre as demais cédulas):
 1 nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1. 
 */
 
-//Deu preguiça
+//Posso usar um callback aqui?
 
 function withdrawMoney(value) { //Valores disponíveis para o saque, notas definidas como variaveis porque podem assumir valores
     let moneyBill1 = 0
