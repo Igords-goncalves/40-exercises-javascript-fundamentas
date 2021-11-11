@@ -11,22 +11,16 @@ function crescimentoKids(altura1, taxa1, altura2, taxa2) {
     let menorAltura
 
     if (altura1 < altura2) {
-        console.log('\n-----------------------------------------')
         menorAltura = `A criança 1 tem menor altura ${altura1}cm`
     } else if (altura1 > altura2) {
-            console.log('\n-----------------------------------------')
             menorAltura = `A criança 2 tem menor altura ${altura2}cm`
         } else {
-            console.log('\n-----------------------------------------')
             menorAltura = 'As alturas das crianças são iguais'
         }
         console.log(menorAltura + '\n')
 
-    const txCrescimento1 = altura1 * (taxa1 / 100)
-    const txCrescimento2 = altura2 * (taxa2 / 100)
-
-    let crescimentoAnual1 = altura1 + txCrescimento1
-    let crescimentoAnual2 = altura2 + txCrescimento2
+    let crescimentoAnual1 = altura1 + taxa1
+    let crescimentoAnual2 = altura2 + taxa2
 
     let ano = 0
     
@@ -34,7 +28,7 @@ function crescimentoKids(altura1, taxa1, altura2, taxa2) {
     if (crescimentoAnual1 < crescimentoAnual2) {
         while (crescimentoAnual1 < crescimentoAnual2) {
             ano++
-            crescimentoAnual1 += txCrescimento1
+            crescimentoAnual1 += taxa1
         }
 
         if (ano > 12) {
@@ -46,7 +40,7 @@ function crescimentoKids(altura1, taxa1, altura2, taxa2) {
     } else if (crescimentoAnual2 < crescimentoAnual1) {
         while (crescimentoAnual2 < crescimentoAnual1) {
             ano++
-            crescimentoAnual2 += txCrescimento2
+            crescimentoAnual2 += taxa2
         }
         
         if (ano > 12) {
