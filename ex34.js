@@ -21,4 +21,3 @@ function verificarCaracteres(string1, string2) {
 console.log(verificarCaracteres("Armando", "armando"))
 console.log(verificarCaracteres("Armando", "bananada"))
 console.log(verificarCaracteres("Armando", "r"))
-
